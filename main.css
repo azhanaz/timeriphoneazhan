@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Patrick+Hand+SC&display=swap');
+html {
+    background-color: black;
+    animation: 15s infinite alternate ease-out breathing-color--dark;
+}
+
+@keyframes breathing-color--dark {
+    from {
+        background-color: #000000;
+    }
+    to {
+        background-color: #ffffff;
+    }
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.circle {
+    position: relative;
+    width: 50vh;
+    height: 50vh;
+    top: 00px;
+    left: 600px;
+    background: linear-gradient(#304d63, #b2e7e8);
+    border-radius: 50%;
+    animation: animate 0.5s linear infinite;
+}
+
+@keyframes animate {
+    from {
+        transform: rotate(8deg);
+    }
+    to {
+        transform: rotate(368deg);
+    }
+}
+
+.circle:after {
+    content: '';
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    bottom: 35px;
+    left: 35px;
+    border-radius: 50%;
+    background-color: black;
+    animation: 15s infinite alternate ease-out breathing-color--dark;
+}
+
+.circle span {
+    position: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#304d63, #b2e7e8);
+    border-radius: 50%;
+}
+
+.circle span:nth-child(1) {
+    filter: blur(5px);
+}
+
+.circle span:nth-child(2) {
+    filter: blur(10px);
+}
+
+.circle span:nth-child(3) {
+    filter: blur(20px);
+}
+
+.circle span:nth-child(4) {
+    filter: blur(55px);
+}
+
+.container {
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+.loading {
+    display: flex;
+    flex-direction: row;
+}
+
+.loading__letter {
+    font-size: 88px;
+    font-weight: normal;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-family: 'Patrick Hand SC', cursive;
+    color: linear-gradient(#304d63, #b2e7e8);
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+.loading__letter:nth-child(2) {
+    animation-delay: .1s;
+}
+
+.loading__letter:nth-child(3) {
+    animation-delay: .2s;
+}
+
+.loading__letter:nth-child(4) {
+    animation-delay: .3s;
+}
+
+.loading__letter:nth-child(5) {
+    animation-delay: .4s;
+}
+
+.loading__letter:nth-child(6) {
+    animation-delay: .5s;
+}
+
+.loading__letter:nth-child(7) {
+    animation-delay: .6s;
+}
+
+.loading__letter:nth-child(8) {
+    animation-delay: .8s;
+}
+
+.loading__letter:nth-child(9) {
+    animation-delay: 1s;
+}
+
+.loading__letter:nth-child(10) {
+    animation-delay: 1.2s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0px)
+    }
+    40% {
+        transform: translateY(-40px);
+    }
+    80%,
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media (max-width: 700px) {
+    .loading__letter {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 340px) {
+    .loading__letter {
+        font-size: 40px;
+    }
+}
+*/
+
+body {
+    font-family: sans-serif;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+}
+
+.base-timer {
+    position: relative;
+    width: 47vh;
+    right: 244px;
+    height: 47vh;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+    right: 900;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 6px;
+    animation: 15s infinite alternate ease-out breathing-color--dark;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 7px;
+    stroke-linecap: round;
+    transform: rotate(90deg);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: #9EDE73;
+}
+
+.base-timer__path-remaining.orange {
+    color: #F7EA00;
+}
+
+.base-timer__path-remaining.red {
+    color: #BE0000;
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    top: 250px;
+    left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+}
