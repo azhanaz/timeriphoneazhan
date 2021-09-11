@@ -34,7 +34,7 @@ body {
     width: 50vh;
     height: 50vh;
     top: 00px;
-    left: 600px;
+    left: 550px;
     background: linear-gradient(#304d63, #b2e7e8);
     border-radius: 50%;
     animation: animate 0.5s linear infinite;
